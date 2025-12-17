@@ -4,77 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biodata Pribadi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f6f8;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(135deg, #4a90e2, #357abd);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.4em;
-        }
-        header p {
-            margin-top: 10px;
-            font-size: 1.1em;
-        }
-        .container {
-            max-width: 900px;
-            margin: -40px auto 40px;
-            padding: 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        }
-        .card h2 {
-            margin-top: 0;
-            color: #4a90e2;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table td {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        table td:first-child {
-            font-weight: bold;
-            width: 35%;
-        }
-        .skills span {
-            display: inline-block;
-            background: #4a90e2;
-            color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            margin: 5px 5px 0 0;
-            font-size: 0.9em;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #222;
-            color: #ccc;
-        }
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.4em;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+.container {
+    max-width: 900px;
+    margin: -40px auto 40px;
+    padding: 20px;
+}
+
+.card {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #90caf9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+table td:first-child {
+    font-weight: bold;
+    width: 35%;
+    color: #bbb;
+}
+
+.skills span {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 5px 5px 0 0;
+    font-size: 0.9em;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background: #333;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.social-links a i {
+    font-size: 1.2em;
+}
+
+.social-links a:hover {
+    background: #444;
+    transform: translateY(-3px);
+}
+
+button {
+    background: #333;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background: #444;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #aaa;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #444;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+.card button {
+    background: #2b2b2b !important;
+    color: #ffffff !important;
+    border: 1px solid #444;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    background: #3a3a3a !important;
+    border-color: #555;
+    transform: translateY(-2px);
+}
+
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Nama Lengkap</h1>
-    <p>Pelajar / Mahasiswa / Pekerja</p>
+    <img src="profile.jpeg" alt="Foto Profil" class="profile-img">
+    <h1>Hosea Suko Baskoro</h1>
+    <p>Mahasiswa</p>
 </header>
 
 <div class="container">
@@ -84,27 +169,27 @@
         <table>
             <tr>
                 <td>Nama</td>
-                <td>Nama Lengkap</td>
+                <td>Hosea Suko Baskoro</td>
             </tr>
             <tr>
                 <td>Tempat, Tanggal Lahir</td>
-                <td>Kota, 1 Januari 2000</td>
+                <td>Metro, 1 Juni 2003</td>
             </tr>
             <tr>
                 <td>Jenis Kelamin</td>
-                <td>Laki-laki / Perempuan</td>
+                <td>Laki-laki</td>
             </tr>
             <tr>
                 <td>Alamat</td>
-                <td>Alamat Lengkap</td>
+                <td>Salatiga</td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td>email@example.com</td>
+                <td>hoseasuko163@gmail.com</td>
             </tr>
             <tr>
                 <td>No. HP</td>
-                <td>08xxxxxxxxxx</td>
+                <td>0897 5381 731</td>
             </tr>
         </table>
     </div>
@@ -128,10 +213,32 @@
     </div>
 
     <div class="card">
+    <h2>Sosial Media</h2>
+    <div class="social-links">
+        <a href="https://instagram.com/hosea_baskoroo" target="_blank">
+            <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://facebook.com/Hosea Suko Baskoro" target="_blank">
+            <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+        <a href="https://linkedin.com/in/username" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/username" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a>
+    </div>
+</div>
+
+
+    <div class="card">
         <h2>Kontak</h2>
         <p>Silakan hubungi saya melalui WhatsApp atau Email.</p>
         <button onclick="hubungiWA()" style="background:#4a90e2;border:none;color:white;padding:12px 20px;border-radius:6px;cursor:pointer;">
             Hubungi via WhatsApp
+        </button>
+        <button onclick="hubungiEmail()" style="background:#4a90e2;border:none;color:white;padding:12px 20px;border-radius:6px;cursor:pointer;">
+            Hubungi via Email
         </button>
     </div>
 
@@ -143,9 +250,15 @@
 
 <script>
     function hubungiWA() {
-        const nomor = '6281234567890'; // ganti nomor WA
+        const nomor = '628975381731'; // ganti nomor WA
         const pesan = encodeURIComponent('Halo, saya melihat biodata Anda.');
         window.open(`https://wa.me/${nomor}?text=${pesan}`, '_blank');
+    }
+    function hubungiEmail() {
+        const email = 'hoseasuko163@gmail.com'; // ganti email kamu
+        const subject = encodeURIComponent('Kontak dari Website Biodata');
+        const body = encodeURIComponent('Halo, saya menghubungi Anda melalui website biodata anda.');
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
     }
 </script>
 
