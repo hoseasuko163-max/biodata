@@ -151,6 +151,20 @@ footer {
     border-color: #555;
     transform: translateY(-2px);
 }
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* jarak antar tombol */
+    margin-top: 15px;
+}
+
+/* di layar besar tombol sejajar */
+@media (min-width: 600px) {
+    .contact-buttons {
+        flex-direction: row;
+    }
+}
+
 
     </style>
 </head>
@@ -232,15 +246,15 @@ footer {
 
 
     <div class="card">
-        <h2>Kontak</h2>
-        <p>Silakan hubungi saya melalui WhatsApp atau Email.</p>
-        <button onclick="hubungiWA()" style="background:#4a90e2;border:none;color:white;padding:12px 20px;border-radius:6px;cursor:pointer;">
-            Hubungi via WhatsApp
-        </button>
-        <button onclick="hubungiEmail()" style="background:#4a90e2;border:none;color:white;padding:12px 20px;border-radius:6px;cursor:pointer;">
-            Hubungi via Email
-        </button>
+    <h2>Kontak</h2>
+    <p>Silakan hubungi saya melalui WhatsApp atau Email.</p>
+
+    <div class="contact-buttons">
+        <button onclick="hubungiWA()">Hubungi via WhatsApp</button>
+        <button onclick="hubungiEmail()">Hubungi via Email</button>
     </div>
+</div>
+
 
 </div>
 
@@ -264,4 +278,5 @@ footer {
 
 </body>
 </html>
+
 
