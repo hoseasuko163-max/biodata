@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Pribadi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.4em;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        .container {
+            max-width: 900px;
+            margin: -40px auto 40px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #4a90e2;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        table td:first-child {
+            font-weight: bold;
+            width: 35%;
+        }
+        .skills span {
+            display: inline-block;
+            background: #4a90e2;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 5px 5px 0 0;
+            font-size: 0.9em;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nama Lengkap</h1>
+    <p>Pelajar / Mahasiswa / Pekerja</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Biodata</h2>
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>Nama Lengkap</td>
+            </tr>
+            <tr>
+                <td>Tempat, Tanggal Lahir</td>
+                <td>Kota, 1 Januari 2000</td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>Laki-laki / Perempuan</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>Alamat Lengkap</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>email@example.com</td>
+            </tr>
+            <tr>
+                <td>No. HP</td>
+                <td>08xxxxxxxxxx</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya adalah pribadi yang bertanggung jawab, mudah belajar hal baru, dan memiliki motivasi untuk terus berkembang baik dalam pendidikan maupun pekerjaan.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Keahlian</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Komunikasi</span>
+            <span>Kerja Tim</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Kontak</h2>
+        <p>Silakan hubungi saya melalui WhatsApp atau Email.</p>
+        <button onclick="hubungiWA()" style="background:#4a90e2;border:none;color:white;padding:12px 20px;border-radius:6px;cursor:pointer;">
+            Hubungi via WhatsApp
+        </button>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 Biodata Pribadi</p>
+</footer>
+
+<script>
+    function hubungiWA() {
+        const nomor = '6281234567890'; // ganti nomor WA
+        const pesan = encodeURIComponent('Halo, saya melihat biodata Anda.');
+        window.open(`https://wa.me/${nomor}?text=${pesan}`, '_blank');
+    }
+</script>
+
+</body>
+</html>
